@@ -1,0 +1,122 @@
+/* ----------------------------- Sidebar Container ----------------------------- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 240px;
+  background-color: #0d1117; /* matte dark */
+  border-right: 1px solid #21262d;
+  color: #c9d1d9;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+/* ----------------------------- Header ----------------------------- */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #21262d;
+}
+
+.sidebar-logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #00ff88; /* hacker green */
+  font-family: "Source Code Pro", monospace;
+  letter-spacing: 1px;
+}
+
+.sidebar-close-btn {
+  background: transparent;
+  border: none;
+  color: #c9d1d9;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.sidebar-close-btn:hover {
+  color: #00ff88;
+}
+
+/* ----------------------------- Nav ----------------------------- */
+.sidebar-nav {
+  margin-top: 1rem;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item a {
+  display: flex;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  color: #c9d1d9;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.95rem;
+  border-left: 3px solid transparent;
+  width: 100%;
+}
+
+.nav-item a:hover {
+  background-color: #161b22;
+  color: #00ff88;
+}
+
+.nav-item a.active {
+  background-color: #161b22;
+  border-left: 3px solid #00ff88;
+  color: #00ff88;
+}
+
+.nav-icon {
+  margin-right: 0.8rem;
+  font-size: 1.1rem;
+}
+
+/* ----------------------------- Toggle Button ----------------------------- */
+.sidebar-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: #0d1117;
+  border: 1px solid #21262d;
+  border-radius: 4px;
+  color: #c9d1d9;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.sidebar-toggle:hover {
+  color: #00ff88;
+  border-color: #00ff88;
+}
+
+/* ----------------------------- Overlay (Mobile) ----------------------------- */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(13, 17, 23, 0.6);
+  z-index: 900;
+}

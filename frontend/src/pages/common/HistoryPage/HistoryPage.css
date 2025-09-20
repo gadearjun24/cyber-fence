@@ -1,0 +1,300 @@
+/* ----------------------------- General Page ----------------------------- */
+.history-page {
+  background-color: #0d1117; /* deep cyber-dark background */
+  color: #c9d1d9;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: "Source Code Pro", monospace;
+}
+
+/* Page Title */
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #58a6ff;
+  text-shadow: 0 0 5px #58a6ff, 0 0 10px #58a6ff;
+}
+
+/* ----------------------------- Filter Bar ----------------------------- */
+.filter-bar {
+  margin-bottom: 1rem;
+}
+
+.filter-bar select {
+  background-color: #161b22;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-family: "Source Code Pro", monospace;
+  cursor: pointer;
+  font-size: 0.95rem;
+  box-shadow: inset 0 0 5px #58a6ff30;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter-bar select:hover {
+  border-color: #58a6ff;
+  box-shadow: inset 0 0 10px #58a6ff50;
+}
+
+/* ----------------------------- History Table ----------------------------- */
+.history-table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #161b22;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #58a6ff30;
+}
+
+.history-table th,
+.history-table td {
+  border: 1px solid #30363d;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.history-table th {
+  background-color: #0d1117;
+  color: #79c0ff;
+  font-weight: bold;
+  text-shadow: 0 0 2px #79c0ff;
+}
+
+.history-table tr:nth-child(even) {
+  background-color: #0d1117;
+}
+
+.history-table tr:hover {
+  background-color: #161b22;
+  box-shadow: inset 0 0 10px #58a6ff30;
+}
+
+.history-table td a {
+  color: #58a6ff;
+  text-decoration: underline;
+}
+
+.no-data {
+  color: #8b949e;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* ----------------------------- Prediction Badges ----------------------------- */
+.safe {
+  background-color: #00ff9950;
+  color: #00ff99;
+  font-weight: bold;
+  /* text-shadow: 0 0 5px #00ff99; */
+}
+.suspicious {
+  color: #faad14;
+  font-weight: bold;
+  /* text-shadow: 0 0 5px #faad14; */
+  background-color: #faad1450;
+}
+.phishing {
+  color: #ff4d4f;
+  font-weight: bold;
+  /* text-shadow: 0 0 5px #ff4d4f; */
+  background-color: #ff4d4f50;
+}
+
+/* ----------------------------- Confidence Bar ----------------------------- */
+.confidence-bar {
+  position: relative;
+  width: 100%;
+  height: 18px;
+  background-color: #161b22;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #30363d;
+}
+
+.filled-bar {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.confidence-bar span {
+  position: absolute;
+  right: 8px;
+  top: 0;
+  color: #c9d1d9;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 18px;
+  text-shadow: 0 0 2px #58a6ff;
+}
+
+/* ----------------------------- Buttons ----------------------------- */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  font-family: "Source Code Pro", monospace;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.view-btn {
+  background-color: #238636;
+  color: #f0f6fc;
+  box-shadow: 0 0 5px #23863650;
+}
+
+.view-btn:hover {
+  background-color: #2ea043;
+  box-shadow: 0 0 10px #2ea04350;
+}
+
+/* ----------------------------- Pagination ----------------------------- */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+.pagination button {
+  background-color: #161b22;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Source Code Pro", monospace;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination button.active {
+  background-color: #238636;
+  color: #f0f6fc;
+  box-shadow: 0 0 5px #23863680;
+}
+
+.pagination button:hover:not(.active) {
+  border-color: #58a6ff;
+  box-shadow: 0 0 5px #58a6ff50;
+}
+
+/* ----------------------------- File Modal ----------------------------- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(13, 17, 23, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #161b22;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 500px;
+  max-width: 95%;
+  position: relative;
+  box-shadow: 0 0 20px #58a6ff40;
+}
+.modal-content a{
+  color: #58a6ff;
+  text-decoration: underline;
+}
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: #c9d1d9;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.close-btn:hover {
+  color: #ff4d4f;
+}
+
+.verdict-summary p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.verdict-summary b.safe {
+  color: #00ff99;
+  border-radius: 4px;
+  padding: 2px;
+  /* text-shadow: 0 0 5px #00ff99; */
+}
+.verdict-summary b.suspicious {
+  color: #faad14;
+  border-radius: 4px;
+  padding: 2px;
+  /* text-shadow: 0 0 5px #faad14; */
+}
+.verdict-summary b.phishing {
+  color: #ff4d4f;
+  border-radius: 4px;
+  padding: 2px;
+  /* text-shadow: 0 0 5px #ff4d4f; */
+}
+
+/* Detector Results in Modal */
+.detector-results {
+  margin-top: 1rem;
+}
+
+.detector-results h4 {
+  color: #58a6ff;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 5px #58a6ff;
+}
+
+.detector-results ul {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+.detector-results li {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  color: #c9d1d9;
+}
+
+/* Detector Section */
+.detector-section {
+  margin-bottom: 1rem;
+}
+
+/* ----------------------------- Scrollbar Styling ----------------------------- */
+.history-table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.history-table-wrapper::-webkit-scrollbar-thumb {
+  background-color: #58a6ff60;
+  border-radius: 4px;
+}
+
+.history-table-wrapper::-webkit-scrollbar-track {
+  background-color: #0d1117;
+}

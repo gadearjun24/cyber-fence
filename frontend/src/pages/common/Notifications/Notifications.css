@@ -1,0 +1,107 @@
+/* ----------------------------- Notifications Page ----------------------------- */
+.notifications-page {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: "Source Code Pro", monospace;
+}
+
+/* Page Title */
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #58a6ff;
+  display: flex;
+  align-items: center;
+  text-shadow: 0 0 5px #58a6ff, 0 0 10px #58a6ff;
+}
+
+/* ----------------------------- Notifications List ----------------------------- */
+.notifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-item {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 0 10px #58a6ff20;
+}
+
+.notification-item:hover {
+  background-color: #1c2128;
+  border-color: #58a6ff;
+  box-shadow: 0 0 12px #58a6ff40;
+}
+
+/* ----------------------------- Notification Content ----------------------------- */
+.notification-content {
+  max-width: 85%;
+}
+
+.notification-title {
+  font-size: 1.2rem;
+  margin: 0 0 0.25rem 0;
+  color: #79c0ff;
+  text-shadow: 0 0 3px #79c0ff;
+}
+
+/* ----------------------------- Verdict Badges ----------------------------- */
+.badge {
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-left: 0.25rem;
+  text-transform: capitalize;
+}
+
+.badge.real {
+  background-color: #00ff9930;
+  color: #00ff99;
+  text-shadow: 0 0 5px #00ff99;
+}
+
+.badge.fake {
+  background-color: #ff4d4f30;
+  color: #ff4d4f;
+  text-shadow: 0 0 5px #ff4d4f;
+}
+
+/* ----------------------------- Time ----------------------------- */
+.notification-time {
+  font-size: 0.8rem;
+  color: #8b949e;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+/* ----------------------------- Empty State ----------------------------- */
+.no-notifications {
+  text-align: center;
+  color: #8b949e;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+/* ----------------------------- File Link (if enabled) ----------------------------- */
+.view-file {
+  color: #58a6ff;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+.view-file:hover {
+  color: #79c0ff;
+  text-shadow: 0 0 5px #58a6ff;
+}

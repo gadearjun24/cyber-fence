@@ -1,0 +1,105 @@
+/* === Dashboard Container === */
+.dashboard-container {
+  background-color: #0d1117; /* same deep dark as other pages */
+  color: #c9d1d9;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: "Source Code Pro", monospace;
+}
+
+/* === KPI Stats Grid === */
+.dashboard-container .kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-container .kpi-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 10px #58a6ff30;
+  transition: all 0.3s ease;
+}
+
+.dashboard-container .kpi-card:hover {
+  background-color: #1c2128;
+  box-shadow: 0 0 15px #58a6ff60;
+  transform: translateY(-4px);
+}
+
+.dashboard-container .kpi-card h4 {
+  color: #58a6ff;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  text-shadow: 0 0 5px #58a6ff;
+}
+
+.dashboard-container .kpi-card p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #79c0ff;
+  margin: 0.3rem 0;
+  text-shadow: 0 0 6px #79c0ff80;
+}
+
+.dashboard-container .kpi-card small {
+  font-size: 0.85rem;
+  color: #8b949e;
+}
+
+/* === Charts Grid === */
+.dashboard-container .charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  .dashboard-container .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Chart Card === */
+.dashboard-container .chart-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px #58a6ff30;
+  transition: all 0.3s ease;
+}
+
+.dashboard-container .chart-card:hover {
+  background-color: #1c2128;
+  box-shadow: 0 0 15px #58a6ff60;
+  transform: translateY(-4px);
+}
+
+.dashboard-container .chart-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #58a6ff;
+  text-shadow: 0 0 5px #58a6ff;
+}
+
+.dashboard-container .chart-card p {
+  font-size: 0.95rem;
+  color: #8b949e;
+}
+
+/* === Tooltip (Recharts override) === */
+.recharts-default-tooltip {
+  background: #0d1117 !important;
+  border: 1px solid #58a6ff !important;
+  border-radius: 8px;
+  color: #c9d1d9 !important;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.8rem !important;
+  box-shadow: 0 0 10px #58a6ff70;
+}

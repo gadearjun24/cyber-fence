@@ -1,0 +1,149 @@
+/* UserProfile.css */
+
+.profile-page {
+  padding: 2rem;
+  background-color: #0d1117; /* deep matte dark */
+  min-height: calc(100vh - 60px);
+  color: #e6edf3; /* soft white-gray */
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #00ff88; /* terminal green accent */
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-card {
+  background-color: #161b22; /* dark card bg */
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  border: 1px solid #30363d;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #00ff88;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.profile-header h3 {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.profile-header .role {
+  font-size: 0.9rem;
+  color: #8b949e; /* muted gray */
+  font-style: italic;
+}
+
+.profile-details h4 {
+  font-size: 1.1rem;
+  color: #00ff88;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 0.5rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: #e6edf3;
+}
+
+.detail-row span:first-child {
+  font-weight: 600;
+  color: #8b949e;
+}
+
+.detail-row input {
+  flex: 1;
+  margin-left: 1rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background-color: #0d1117;
+  color: #e6edf3;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.detail-row input:focus {
+  border-color: #00ff88;
+}
+
+.profile-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.profile-actions button {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Save */
+.save-btn {
+  background-color: #00ff88;
+  color: #0d1117;
+}
+
+.save-btn:hover {
+  background-color: #00cc6a;
+  transform: scale(1.03);
+}
+
+/* Edit */
+.edit-btn {
+  background-color: #21262d;
+  color: #e6edf3;
+  border: 1px solid #30363d;
+}
+
+.edit-btn:hover {
+  background-color: #2c313a;
+  transform: scale(1.03);
+}
+
+/* Logout */
+.logout-btn {
+  background-color: #ff4d4f;
+  color: #fff;
+}
+
+.logout-btn:hover {
+  background-color: #d9363e;
+  transform: scale(1.03);
+}
